@@ -1,0 +1,120 @@
+//user api requests
+
+POST http://localhost:4000/user-api/user
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"rohit",
+    "password":"rohit",
+    "email":"rohit@gmail.com"
+}
+
+###
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"rohit",
+    "password":"rohit"
+}
+
+###
+GET http://localhost:4000/user-api/articles
+Authorization: Bearer 
+
+###
+POST http://localhost:4000/user-api/comment/1711808337 
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+    "username":"rohit",
+    "comment":"Helped"
+}
+
+###
+POST http://localhost:4000/author-api/author
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"sam",
+    "password":"sam",
+    "email":"sam@gmail.com"
+}
+
+###
+POST http://localhost:4000/author-api/login
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"sam",
+    "password":"sam"
+}
+
+
+
+
+###
+POST http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "articleId":"{{$timestamp}}",
+    "title":"Operating Systems",
+    "category":"#OS",
+    "content":"An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. It acts as an intermediary between the computer hardware and the user applications, facilitating the execution of software programs and providing an interface for users to interact with the computer.",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"sam",
+    "comments":[ ],
+    "status":true
+}
+
+###
+PUT http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "articleId":"1711808337",
+    "title":"Node.js",
+    "category":"#backend",
+    "content":"Node.js is one of the powerful open-source and cross-platform runtime environment built on Chrome's V8 JavaScript engine for executing JavaScript code outside of a browser. It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.Environment Setup for NodeJS----Node.js Installer....Node Package Manager....Text Editor or IDE",
+    "dateOfCreation":"2024-03-30T14:18:57.975Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"julie",
+    "comments":[ ],  
+    "status":true
+}
+
+###soft delete set status to false
+PUT http://localhost:4000/author-api/article/1711799598
+Content-Type: application/json
+
+{
+    "articleId":"1711808337",
+    "title":"Node.js",
+    "category":"#backend",
+    "content":"Node.js is one of the powerful open-source and cross-platform runtime environment built on Chrome's V8 JavaScript engine for executing JavaScript code outside of a browser. It provides an event-driven, non-blocking (asynchronous) I/O and cross-platform runtime environment for building highly scalable server-side applications using JavaScript.Environment Setup for NodeJS----Node.js Installer....Node Package Manager....Text Editor or IDE",
+    "dateOfCreation":"2024-03-30T14:18:57.975Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"julie",
+    "comments":[ ],
+    "status":true
+}
+
+###author views only his articles
+GET http://localhost:4000/author-api/articles/nick
+
+###
+POST http://localhost:4000/admin-api/login
+Content-Type: application/json
+
+{
+    "userType":"admin",
+    "username":"M Divyasri",
+    "password":"mdivyasri"
+}

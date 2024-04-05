@@ -1,0 +1,17 @@
+.item{
+    color: rgb(254, 236, 240);
+    background-color: #0e2144;
+}
+.bar{
+    
+    background-color: #0e2144;
+}
+.item:visited{
+    color: rgb(254, 236, 240);
+}
+.item:hover{
+    color: #9FE2BF;
+}
+.item:active{
+    color: rgb(255, 208, 190);
+}

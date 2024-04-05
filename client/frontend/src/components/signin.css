@@ -1,0 +1,27 @@
+.brole{
+    
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    
+}
+.form{
+    
+    background-color:#f08080;
+}
+.btns{
+    background-color: #f3db8c;
+    color: sienna;
+}
+.btns:hover{
+    background-color: #333333;
+    color:whitesmoke;
+}
+.box{
+    color: rgb(250, 250, 250);
+    background-color: #f08080;
+}
+h1{
+    color:steelblue;
+}
