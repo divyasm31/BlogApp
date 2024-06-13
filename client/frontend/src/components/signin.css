@@ -8,20 +8,32 @@
 }
 .form{
     
-    background-color:#f08080;
+    background-color:#cb4154;
+    box-shadow: 1px 2px 2px rgb(1, 29, 12);
 }
 .btns{
-    background-color: #f3db8c;
-    color: sienna;
+    background-color: #f2f7c7;
+    color: #072a26;
+    border-radius: 10%;
 }
 .btns:hover{
-    background-color: #333333;
-    color:whitesmoke;
+    background-color: #f2c29b;
+    color:#512825;
+    border-radius: 10%;
+    box-shadow: 1px 2px 2px black;
 }
 .box{
-    color: rgb(250, 250, 250);
-    background-color: #f08080;
+    color: rgb(252, 249, 251);
+    background-color:#cb4154;
 }
 h1{
-    color:steelblue;
+    color:rgb(42, 13, 81);
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');;
+}
+.main{
+    padding-bottom: 40px;
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
 }

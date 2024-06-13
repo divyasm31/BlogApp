@@ -1,4 +1,83 @@
-.footer{
-    background-color: rgb(249, 243, 187);
-    color:midnightblue
+.bg-footer {
+    background-color: #8da8f9;
+    color:midnightblue;
+    padding: 50px 0 30px;
+    margin-bottom: 0px;
+}
+.footer-heading {
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: start;
+}
+
+.footer-link a {
+    color:midnightblue;
+    line-height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    background-color: #8da8f9;
+    text-align: start;
+}
+
+.footer-link a:hover {
+    color:rgb(238, 243, 163);
+}
+.footer-social-icon {
+    font-size: 15px;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    text-align: start;
+    display: inline-block;
+    background-color: #8da8f9;
+}
+
+.facebook {
+    background-color: #8da8f9;
+    color:midnightblue;
+}
+
+.twitter {
+    background-color: #8da8f9;
+    color:midnightblue;
+}
+
+.google {
+    background-color: #8da8f9;
+    color:midnightblue;
+}
+
+.apple {
+    background-color: #8da8f9;
+    color:midnightblue;
+}
+
+.footer-alt {
+    color:midnightblue;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 12px;
+    background-color: #8da8f9;
+}
+
+
+.footer-heading:after {
+    content: '';
+    width: 25px;
+    border-bottom: 1px solid #dbe7aa;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid #dbe7aa;
+    background-color: #8da8f9;
+}
+.c,.d,.pfoot,.l{
+    background-color: #8da8f9;
+}
+.l{
+    text-align: start;
 }

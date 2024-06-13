@@ -1,22 +1,22 @@
 import React from 'react'
 import { NavLink, Outlet} from 'react-router-dom'
+import { useSelector } from 'react-redux'
+// import Footer from './Footer'
 
 function APBody() {
+
+  let { currentUser } = useSelector(state=>state.userAuthorLoginReducer)
+
   return (
-    <div>
-      <div>
-       
-          <div className='container bg-warning mx-auto'>
-            <div className='row gy-2'>
-            <div className='text-center bg-danger col-sm-6'>
-              <NavLink to='authorprofile/addarticle' style={{backgroundColor:'transparent',color:'floralwhite',textDecorationLine:"none"}}>Add New Article</NavLink>
+    <div className='parent'>
+          <div className='d-flex justify-content-between mx-auto contn '>
+            <div className='text-center col-sm-6 m-2 p-2 r '>
+              <NavLink   style={{backgroundColor:'transparent',color:'#b10269',textDecorationLine:"none"}} className='n' to={`/authorprofile/${currentUser.username}/addarticle`}>Add New Article</NavLink>
             </div>
-            <div className='text-center bg-danger col-sm-6'>
-            <NavLink to='authorprofile/articles' style={{backgroundColor:'transparent',color:'floralwhite',textDecorationLine:"none"}}>Articles</NavLink>
-            </div>
+            <div className='text-center col-sm-6 m-2 p-2 r '>
+            <NavLink to={`/authorprofile/${currentUser.username}/articles-by-author`} style={{backgroundColor:'transparent',color:'#b10269',textDecorationLine:"none"}} className='n'>Articles</NavLink>
             </div>
           </div>
-      </div>
       <Outlet/>
     </div>
   )

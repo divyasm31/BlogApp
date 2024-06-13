@@ -1,0 +1,15 @@
+.nv{
+    color: #092329;
+    text-shadow: 2px 2px 4px #5ae6e8;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+}
+.nv:hover{
+    color:	#f8a9da;
+    text-shadow: 1px 2px 4px black;
+}
+.parent,.dc{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+}

@@ -1,15 +1,18 @@
+import './apbody.css'
 import React from 'react'
 import APHeader from './APHeader'
 import APBody from './APBody'
-import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
+// import { Outlet } from 'react-router-dom'
 
 function AuthorProfile() {
   return (
-    <div>
+    <div className='parent'>
       <APHeader />
-      <div style={{minHeight:"73vh"}}>
+      {/* <div className='parent' style={{minHeight:"73vh"}}> */}
         <APBody />
-      </div>
+      {/* </div> */}
+      <Footer />
     </div>
   )
 }

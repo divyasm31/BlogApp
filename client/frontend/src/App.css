@@ -1,1 +1,13 @@
-
+body{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+  }
+.loading{
+  font-size: 7vh;
+  color: slategray;
+  animation: move 5s infinite
+}
+@keyframes move {
+  50% {transform: rotate(360deg);
+        transform:translateX(45px) ;
+  }
+}

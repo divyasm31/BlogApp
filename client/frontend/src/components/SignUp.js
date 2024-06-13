@@ -1,46 +1,45 @@
 import './signin.css'
 import React from 'react'
-// import Header from './Header'
+import Header from './Header'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import {useForm} from 'react-hook-form'
+import Footer from './Footer'
 
 function SignUp() {
 
     let navigate=useNavigate();
 
     let[error,setError]=useState('')
-  let {register,handleSubmit,formState:{errors}}=useForm();
-  async function handleFormSubmit(userObj){
-    // console.log(userObj)
-
-    if(userObj.userType==='user'){
-      let resUser=await axios.post('http://localhost:4000/user-api/user',userObj)
-      if(resUser.data.message==='new user created'){
-        //navigate to login component
-        navigate('/signin')
-        
-      }
-      else{
-        setError(resUser.data.message)
-      }
-    }else{
-         let resAuthor=await axios.post('http://localhost:4000/author-api/author',userObj)
-      if(resAuthor.data.message==='new author created'){
-        navigate('/signin')
+    let {register,handleSubmit,formState:{errors}}=useForm();
+    async function handleFormSubmit(userObj){
+      // console.log(userObj)
+      if(userObj.userType==='user'){
+        let resUser=await axios.post('http://localhost:4000/user-api/user',userObj)
+        if(resUser.data.message==='new user created'){
+          //navigate to login component
+          navigate('/signin') 
+        }
+        else{
+          setError(resUser.data.message)
+        }
       }else{
-        setError(resAuthor.data.message)
-      }
+          let resAuthor=await axios.post('http://localhost:4000/author-api/author',userObj)
+          if(resAuthor.data.message==='new author created'){
+            navigate('/signin')
+          }else{
+            setError(resAuthor.data.message)
+          }
+        }
     }
-  }
 
 return (
-  <div>
-    {/* <Header /> */}
+  <div className='main'>
+     <Header /> 
       <h1 className='display-5 text-center mt-4 p-2'>Sign Up</h1>
       {error.length!=0 && <p className='text-danger text-center fs-2'>{error}</p>}
-      <form className='form form-group mx-auto w-50 mt-4 p-5'onSubmit={handleSubmit(handleFormSubmit)}>
+      <form className='form rounded form-group mx-auto w-50 mt-4 p-5 mb-4' style={{marginBottom:"20px"}} onSubmit={handleSubmit(handleFormSubmit)}>
           <div className='box d-flex justify-content-center'>
           <div className='box form-check form-check-inline'>
               <input type='radio' className='form-check-input' id='author' value='author'{...register('userType')} />
@@ -81,8 +80,9 @@ return (
           </div>
           <button type='submit' className='btns text-center p-2 mt-5 mx-auto d-block border border-none'>Register</button>
       </form>
+      <Footer />
   </div>
 )
 }
 
-export default SignUp
+export default SignUp;

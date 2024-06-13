@@ -4,6 +4,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+body{
+  background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

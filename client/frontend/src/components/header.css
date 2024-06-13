@@ -1,17 +1,29 @@
-.item{
-    color: rgb(254, 236, 240);
-    background-color: #0e2144;
+ul.bar .item {
+    color: rgb(1, 21, 11);
+    text-shadow: 2px 2px 4px #fffda5;
+    background-color: #8da8f9;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 .bar{
-    
-    background-color: #0e2144;
+    background-color: #8da8f9;;
 }
-.item:visited{
-    color: rgb(254, 236, 240);
+
+ul.bar .item:hover {
+    color: #fffda5;
+    text-shadow: 1px 1px 2px rgb(254, 203, 144);
 }
-.item:hover{
-    color: #9FE2BF;
+
+ul.bar .item:active {
+    color: aliceblue;
 }
-.item:active{
-    color: rgb(255, 208, 190);
+.item.active {
+    color: rgb(240, 245, 255); /* or any other style you want for the active state */
 }
+
+
+.bar,.container {
+    background-color: #8da8f9;
+}
+

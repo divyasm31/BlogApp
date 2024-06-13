@@ -1,0 +1,23 @@
+.para{
+    padding: 2px;
+    font-family: "Caveat";
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: justify;
+    font-size: 4vh;
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+}
+.para,.main,.container,img{
+    background-image:url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg') ;
+}
+.main{
+    margin-bottom: 0px;
+}
+.i{
+    animation: imageani 5s infinite ;
+}
+@keyframes imageani {
+        50% {
+              transform:translateX(100px) ;
+        }
+}

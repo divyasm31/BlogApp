@@ -5,9 +5,9 @@ Content-Type: application/json
 
 {
     "userType":"user",
-    "username":"rohit",
-    "password":"rohit",
-    "email":"rohit@gmail.com"
+    "username":"rosy",
+    "password":"rosy",
+    "email":"rosy@gmail.com"
 }
 
 ###
@@ -16,8 +16,8 @@ Content-Type: application/json
 
 {
     "userType":"user",
-    "username":"rohit",
-    "password":"rohit"
+    "username":"rosy",
+    "password":"rosy"
 }
 
 ###
@@ -30,7 +30,7 @@ Authorization: Bearer
 Content-Type: application/json
 
 {
-    "username":"rohit",
+    "username":"rosy",
     "comment":"Helped"
 }
 
@@ -51,8 +51,8 @@ Content-Type: application/json
 
 {
     "userType":"author",
-    "username":"sam",
-    "password":"sam"
+    "username":"Sam",
+    "password":"Sam"
 }
 
 
@@ -107,14 +107,5 @@ Content-Type: application/json
 }
 
 ###author views only his articles
-GET http://localhost:4000/author-api/articles/nick
-
-###
-POST http://localhost:4000/admin-api/login
-Content-Type: application/json
-
-{
-    "userType":"admin",
-    "username":"M Divyasri",
-    "password":"mdivyasri"
-}
+GET http://localhost:4000/author-api/articles/Sam
+Authorization: Bearer 

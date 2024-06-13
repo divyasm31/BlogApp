@@ -1,0 +1,10 @@
+.parent,.contn,.r,.n{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+}
+.n{
+    text-shadow: 2px 2px 4px #5ae6e8;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 4vh; 
+}

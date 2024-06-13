@@ -1,0 +1,45 @@
+.ct{
+   background-color: transparent;
+}
+.card{
+  border-color: #092329;
+   box-shadow: 1px 2px 2px #5ae6e8; 
+}
+.card-body,.author,.card-title,.card-text{
+    background-color: #74dadc;
+}
+.card-title{
+    color: #e45b59;
+}
+.read{
+    color:aliceblue;
+    background-color: #092329;
+}
+.card-title{
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.card-footer{
+    background-color: #b05b52;
+    color: wheat;
+}
+.parent,.rw,.ct{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+  }
+  .rw::before{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+    z-index: -1;
+    position: absolute;
+  }
+  .rw{
+    background-color: transparent;
+  }
+  .movingcard{
+    animation: cardmove 5s infinite ;
+}
+@keyframes cardmove {
+        50% {
+              transform:translateY(20px) ;
+        }
+}

@@ -1,34 +1,33 @@
+import React from 'react'
 import './artcards.css'
-import React, { useEffect } from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
+function AdminAllArticles() {
 
 
-
-
-function Articles() {
-
-   let { currentUser } = useSelector(state=>state.userAuthorLoginReducer)
   let [articlesList,setArticlesList] = useState([]);
   let navigate = useNavigate();
 
+  let {currentUser} = useSelector(state=>state.userAuthorLoginReducer)
 
   function toUTC(iso){
     let date = new Date(iso).getUTCDate();
-    let day = new Date(iso).getUTCDay();
+    let day = new Date(iso).getUTCDay()+1;
     let year = new Date(iso).getUTCFullYear();
     return `${date}/${day}/${year}`
   }
 
-  let token=localStorage.getItem('token');
-  let axiosWithToken = axios.create({
+    let token=localStorage.getItem('token');
+    let axiosWithToken = axios.create({
     headers:{Authorization:`Bearer ${token}`}
   })
   async function displayArticles(){
-    let response = await axiosWithToken.get('http://localhost:4000/user-api/articles');
-    if(response.data.message==='articles'){
+    // console.log("display")
+    let response = await axiosWithToken.get('http://localhost:4000/admin-api/articles');
+    // console.log(response)
+    if(response.data.message==='all articles'){
       setArticlesList(response.data.payload)
     }
   }
@@ -37,15 +36,17 @@ function Articles() {
   },[])
   function readArticle(articleObj){
     // console.log(articleObj)
-    navigate(`/userprofile/${currentUser.username}/article/${articleObj.articleId}`,{state:articleObj});
+    navigate(`/adminprofile/${currentUser.username}/article/:articleid`,{state:articleObj});
   }
 
+
   return (
-    <div className='parent'>
+    <div>
+      <div className='parent'>
       <div className='ct container mx-auto mb-4 mt-1 pt-1'>
       <div className='rw row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2 d-flex justify-content-evenly'>
         {
-          articlesList.map((article) => ( (article.status===true)&& 
+          articlesList.map((article) =>  
           <div key={article.articleId} className='col'>
               <div className=' card movingcard h-100'>
                 <div className='card-body'>
@@ -58,12 +59,13 @@ function Articles() {
               </div>
             </div>
             
-          ))
+          )
         }
       </div>
       </div>
     </div>
+    </div>
   )
 }
 
-export default Articles
+export default AdminAllArticles;

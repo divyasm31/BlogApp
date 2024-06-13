@@ -1,0 +1,26 @@
+.artbox{
+    background-color:#cbecff;
+}
+.tit{
+    color: #b33d3f;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+.content{
+    font-family: "Pathway Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #741d5b;
+    line-height: 5vh;
+    font-size: 4vh;
+}
+.parent{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+}
+.ch{
+    background-color:#74dadc;
+}
+.pr{
+    background-color: #cbecff;
+    font-weight: bolder;
+}

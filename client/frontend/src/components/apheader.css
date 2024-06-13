@@ -1,0 +1,48 @@
+.barap{
+    background-color: #ffadad;
+    color: 	#563c14;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 3vh;
+}
+.sp{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    color: 	#563c14;
+    font-style: normal;
+    font-size: 4vh;
+}
+.sb{
+    background-color: #ffadad;
+    color: 	#563c14;
+}
+.signout{
+    background-color: #ffadad;
+    font-size: 2.5vh;
+    text-shadow: 1px 2px 2px lemonchiffon;
+}
+.signout:hover{
+    background-color: #ffadad;
+    border: 1px solid #563c14;
+}
+.conaphead,.nav-item{
+    background-color: #ffadad;
+}
+.logo{
+    margin: 0px;
+    padding: 0px;
+    font-size: 4vh;
+}
+.parent{
+    background-image: url('https://img.freepik.com/premium-vector/vector-pink-star-shape-blue-background-perfect-wallpaper-backdrop-postcard-background_921039-4008.jpg');
+  }
+  .hh{
+    padding-right: 500px;
+    padding-top: 1px;
+  }
+  .h{
+    color: #ffadad;
+    background-color: #ffadad;
+    text-decoration: none;
+  }

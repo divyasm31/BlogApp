@@ -11,7 +11,6 @@ let userCollection;
 //user registration route
 userApp.use((req,res,next)=>{
     userCollection=req.app.get('userscollection')
-    
     next();
 })
 
@@ -34,11 +33,11 @@ userApp.post('/login',expressAsyncHandler(async(req,res)=>{
     const user=req.body;
     const result=await userCollection.findOne({username:user.username});
     if(result===null){
-        res.send({message:"username doesn't exist"})
+        res.send({message:"invalid username"})
     }else{
         const status=await bcryptjs.compare(user.password,result.password)
         if(status===true){
-             const signedToken=jsonwebtoken.sign({username:user.username},process.env.SECRET_KEY,{expiresIn:30})
+             const signedToken=jsonwebtoken.sign({username:user.username},process.env.SECRET_KEY,{expiresIn:"1d"})
             res.send({message:"Login Successful",token:signedToken,user:result})
         }else{
             res.send({message:"Incorrect Password"})
@@ -58,15 +57,20 @@ userApp.get('/articles',verifyToken,expressAsyncHandler(async(req,res)=>{
 }))
 
 userApp.post('/comment/:artid',verifyToken,expressAsyncHandler(async(req,res)=>{
-    const artid=req.params.artid
+    const artid=Number(req.params.artid)
+    // console.log(artid)
     const dataFromUser=req.body
+    // console.log(dataFromUser)
     const articleCollection=req.app.get('articlescollection')
     let result=await articleCollection.findOne({articleId:artid})
     if(result===null){
         res.send({message:"article not found"})
     }else{
+        if(dataFromUser.comments.length===0){
+            res.send({message:"Empty comment cannot be posted"})
+        }else{
         await articleCollection.updateOne({articleId:artid},{$addToSet:{comments:dataFromUser}})
-        res.send({message:"Comment Posted"})
+        res.send({message:"Comment Posted"})}
     }
 }))
 
